@@ -11,6 +11,8 @@ public class Main : Node
 	private GridContainer grid;
 	// Size of each cell
 	private Vector2 cellSize;
+	// 顶部栏大小
+	const int topBar=50;
 	// Called when the node enters the scene tree for the first time
 	public override void _Ready()
 	{
@@ -18,6 +20,7 @@ public class Main : Node
 		gameController = new GameController();
 
 		grid = new GridContainer();
+		grid.MarginTop = topBar;
 		grid.Columns = 9;
 		string[] unittypes = { "caster", "assassin", "rider", "berserker", "lancer", "saber", "archer" };
 		for (int i = 0; i < 63; i++)
@@ -99,8 +102,8 @@ public class Main : Node
 
 		// 计算每个格子的大小
 		cellSize = new Vector2(
-			windowSize.x / grid.Columns, 
-			windowSize.y / grid.Columns*9/7);
+			windowSize.x / grid.Columns-5, 
+			(windowSize.y-topBar) *9 / grid.Columns/7-5);
 
 		// 更新每个格子的大小
 		foreach (TextureRect cell in grid.GetChildren())
