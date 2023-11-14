@@ -1,0 +1,36 @@
+# Godot files
+export.cfg
+export_presets.cfg
+*.import
+godot_project.json
+
+# Mono/C# files
+obj/
+bin/
+.vs/
+*.userprefs
+*.sln
+*.csproj
+*.pidb
+*.suo
+*.sln.ide/
+
+# Build results
+[Mm]anaged/
+[Rr]esgen/
+[Tt]heme/
+[Tt]hemes/
+[Tt]mp/
+[Tt]mp/Debug/
+[Tt]mp/Release/
+[Tt]mp/MonoAndroid,Version=v*.*/Debug/
+__AndroidLibraryProjects__.zip
+*.dll
+*.exe
+*.pdb
+*.mdb
+*.apk
+*.unityproj
+*.app
+*.ipa
+*.DS_Store
